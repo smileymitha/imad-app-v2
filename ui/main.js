@@ -6,7 +6,12 @@ var element=document.getelementbyid('main-text');
 element.innerhtml="new value";
 
 //move the image
-var element=document.getelementbyid('img');
+var img=document.getelementbyid('img');
+var marginleft=0;
+function moveright(){
+    marginleft=marginleft+10;
+    img.style.marginleft= marginleft+'px';
+}
 img.onclick=function(){
-    img.style.marginleft="100px";
+    var interval= setinterval(moveright,100);
 };
