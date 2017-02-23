@@ -9,6 +9,17 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var counter=0;
+app.get('/counter',function(req,res){
+    counter=counter+1;
+    res.send(counter.tostring());
+}};
+
+app.get('/:article-name',function(req,res){
+    //articlename==article-one
+    //article[article-one]=={} content object for aticle one
+    var articlename= req.paroms.articlename
+}
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
