@@ -1,8 +1,8 @@
 //counter code
 var button=document.getelementbyid('counter');
-var couner=0; 
+var counter=0; 
 
-button.onclick=function(){
+button.onclick=function() {
     
     //make a request to the counter endpoints
     
@@ -10,7 +10,7 @@ button.onclick=function(){
     
     //render the variable in the correct span
     counter=counter+1;
-    var span=document.getelementid('counter');
+    var span=document.getelementid('count');
     span.innerhtml= counter.tostring();
     
 };
